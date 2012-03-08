@@ -48,13 +48,19 @@ object DBHandler {
     proj.delete
   }
 
+
+  def fetchUserProjects(userId: Int) = for {
+    pas <- ProjectAssignment if pas.userId === userId
+    p <- Project if p.id === pas.projId
+  } yield (p.id ~ p.projName)
+
   def assignProject(userId: Int, projId: Int) =
     ProjectAssignment.userId ~ ProjectAssignment.projId insert (userId, projId)
 
-  def fetchUserProjects(userId: Int) = for {
-      pas <- ProjectAssignment if pas.userId === userId
-      p <- Project if p.id === pas.projId
-    } yield (p.id~p.projName)
+  def unassignProject(userId: Int, projId: Int) {
+    val proj = for {project <- ProjectAssignment if project.projId === projId && project.userId === userId} yield project
+    proj delete
+  }
 
 
 }

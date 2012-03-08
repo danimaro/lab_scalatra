@@ -125,6 +125,30 @@ class LabScalatraServlet
             </table>
           </form>
         </div>
+        <div style="width: 250px">
+          <form action="/user/unassignproject" method="post" theme="simple">
+            <table>
+              <tr>
+                <td style="width: 70px">User Id:</td>
+                <td>
+                    <input type="text" name="userId"/>
+                </td>
+              </tr>
+              <tr>
+                <td>Project Id:</td>
+                <td>
+                    <input type="text" name="projId"/>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Unassign project" style="float: right"/>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
       </body>
     </html>
 
@@ -216,16 +240,6 @@ class LabScalatraServlet
     redirect("/")
   }
 
-  post("/user/assignproject") {
-    val userId = params("userId")
-    val projId = params("projId")
-    println(userId)
-    println(projId)
-    DBHandler.db withSession {
-      DBHandler.assignProject(userId toInt, projId toInt)
-    }
-    redirect("/")
-  }
 
   get("/user/projects") {
     contentType = "text/xml"
@@ -237,7 +251,9 @@ class LabScalatraServlet
           StringBuilder("<userprojects>")
 
       for (proj <- DBHandler.fetchUserProjects(userId toInt)) {
-        result append ("<project><Name>")
+        result append ("<project><id>")
+        result append (proj._1)
+        result append ("</id><Name>")
         result append (proj._2)
         result append ("</Name></project>")
       }
@@ -247,6 +263,28 @@ class LabScalatraServlet
       XML.fromString(result toString)
     }
 
+  }
+
+  post("/user/assignproject") {
+    val userId = params("userId")
+    val projId = params("projId")
+    println(userId)
+    println(projId)
+    DBHandler.db withSession {
+      DBHandler.assignProject(userId toInt, projId toInt)
+    }
+    redirect("/")
+  }
+
+  post("/user/unassignproject") {
+    val userId = params("userId")
+    val projId = params("projId")
+    println(userId)
+    println(projId)
+    DBHandler.db withSession {
+      DBHandler.unassignProject(userId toInt, projId toInt)
+    }
+    redirect("/")
   }
 
 
