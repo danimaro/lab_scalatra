@@ -320,7 +320,9 @@ class LabScalatraServlet
                     <input type="text" name="month"/>
                 </td>
               </tr>
-              <tr/>
+            </table>
+              <br/>
+            <table>
               <tr>
                 <td>Day:</td>
                 <td></td>
@@ -472,6 +474,20 @@ class LabScalatraServlet
               </tr>
               <tr>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
                     <input type="submit" value="Send" style="float: right"/>
                 </td>
@@ -479,10 +495,48 @@ class LabScalatraServlet
             </table>
           </form>
         </div>
-      </body>
-    </html>
+        <br/>
+        <br/>
+        <div style="width: 250px">
+          <form action="/user/create" method="post" theme="simple">
+            <table>
+              <tr>
+                <td style="width: 70px">User id:</td>
+                <td>
+                    <input type="text" name="userId"/>
+                </td>
+              </tr>
+              <tr>
+                <td>Project Id:</td>
+                <td>
+                    <input type="text" name="projId"/>
+                </td>
+              </tr>
+              <tr>
+                <td>Year:</td>
+                <td>
+                    <input type="text" name="year"/>
+                </td>
+              </tr>
+              <tr>
+                <td>Month:</td>
+                <td>
+                    <input type="text" name="month"/>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Delete report" style="float: right"/>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        </body>
+      </html>
 
-  }
+      }
 
 
-}
+      }
