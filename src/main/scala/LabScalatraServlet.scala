@@ -1,3 +1,4 @@
+
 import java.lang.StringBuilder
 import main.scala.db.DBHandler
 import org.scalatra.ScalatraServlet
@@ -328,31 +329,31 @@ class LabScalatraServlet
                 <td></td>
                 <td>1</td>
                 <td>
-                    <input type="text" name="day_1" style="width: 20px"/>
+                    <input type="text" name="day_1" style="width: 20px" value="0"/>
                 </td>
                 <td>2</td>
                 <td>
-                    <input type="text" name="day_2" style="width: 20px"/>
+                    <input type="text" name="day_2" style="width: 20px" value="0"/>
                 </td>
                 <td>3</td>
                 <td>
-                    <input type="text" name="day_3" style="width: 20px"/>
+                    <input type="text" name="day_3" style="width: 20px" value="0"/>
                 </td>
                 <td>4</td>
                 <td>
-                    <input type="text" name="day_4" style="width: 20px"/>
+                    <input type="text" name="day_4" style="width: 20px" value="0"/>
                 </td>
                 <td>5</td>
                 <td>
-                    <input type="text" name="day_5" style="width: 20px"/>
+                    <input type="text" name="day_5" style="width: 20px" value="0"/>
                 </td>
                 <td>6</td>
                 <td>
-                    <input type="text" name="day_6" style="width: 20px"/>
+                    <input type="text" name="day_6" style="width: 20px" value="0"/>
                 </td>
                 <td>7</td>
                 <td>
-                    <input type="text" name="day_7" style="width: 20px"/>
+                    <input type="text" name="day_7" style="width: 20px" value="0"/>
                 </td>
 
               </tr>
@@ -361,31 +362,31 @@ class LabScalatraServlet
                 <td></td>
                 <td>8</td>
                 <td>
-                    <input type="text" name="day_8" style="width: 20px"/>
+                    <input type="text" name="day_8" style="width: 20px" value="0"/>
                 </td>
                 <td>9</td>
                 <td>
-                    <input type="text" name="day_9" style="width: 20px"/>
+                    <input type="text" name="day_9" style="width: 20px" value="0"/>
                 </td>
                 <td>10</td>
                 <td>
-                    <input type="text" name="day_10" style="width: 20px"/>
+                    <input type="text" name="day_10" style="width: 20px" value="0"/>
                 </td>
                 <td>11</td>
                 <td>
-                    <input type="text" name="day_11" style="width: 20px"/>
+                    <input type="text" name="day_11" style="width: 20px" value="0"/>
                 </td>
                 <td>12</td>
                 <td>
-                    <input type="text" name="day_12" style="width: 20px"/>
+                    <input type="text" name="day_12" style="width: 20px" value="0"/>
                 </td>
                 <td>13</td>
                 <td>
-                    <input type="text" name="day_13" style="width: 20px"/>
+                    <input type="text" name="day_13" style="width: 20px" value="0"/>
                 </td>
                 <td>14</td>
                 <td>
-                    <input type="text" name="day_14" style="width: 20px"/>
+                    <input type="text" name="day_14" style="width: 20px" value="0"/>
                 </td>
 
               </tr>
@@ -394,31 +395,31 @@ class LabScalatraServlet
                 <td></td>
                 <td>15</td>
                 <td>
-                    <input type="text" name="day_15" style="width: 20px"/>
+                    <input type="text" name="day_15" style="width: 20px" value="0"/>
                 </td>
                 <td>16</td>
                 <td>
-                    <input type="text" name="day_16" style="width: 20px"/>
+                    <input type="text" name="day_16" style="width: 20px" value="0"/>
                 </td>
                 <td>17</td>
                 <td>
-                    <input type="text" name="day_17" style="width: 20px"/>
+                    <input type="text" name="day_17" style="width: 20px" value="0"/>
                 </td>
                 <td>18</td>
                 <td>
-                    <input type="text" name="day_18" style="width: 20px"/>
+                    <input type="text" name="day_18" style="width: 20px" value="0"/>
                 </td>
                 <td>19</td>
                 <td>
-                    <input type="text" name="day_19" style="width: 20px"/>
+                    <input type="text" name="day_19" style="width: 20px" value="0"/>
                 </td>
                 <td>20</td>
                 <td>
-                    <input type="text" name="day_20" style="width: 20px"/>
+                    <input type="text" name="day_20" style="width: 20px" value="0"/>
                 </td>
                 <td>21</td>
                 <td>
-                    <input type="text" name="day_21" style="width: 20px"/>
+                    <input type="text" name="day_21" style="width: 20px" value="0"/>
                 </td>
 
               </tr>
@@ -427,31 +428,31 @@ class LabScalatraServlet
                 <td></td>
                 <td>22</td>
                 <td>
-                    <input type="text" name="day_22" style="width: 20px"/>
+                    <input type="text" name="day_22" style="width: 20px" value="0"/>
                 </td>
                 <td>23</td>
                 <td>
-                    <input type="text" name="day_23" style="width: 20px"/>
+                    <input type="text" name="day_23" style="width: 20px" value="0"/>
                 </td>
                 <td>24</td>
                 <td>
-                    <input type="text" name="day_24" style="width: 20px"/>
+                    <input type="text" name="day_24" style="width: 20px" value="0"/>
                 </td>
                 <td>25</td>
                 <td>
-                    <input type="text" name="day_25" style="width: 20px"/>
+                    <input type="text" name="day_25" style="width: 20px" value="0"/>
                 </td>
                 <td>26</td>
                 <td>
-                    <input type="text" name="day_26" style="width: 20px"/>
+                    <input type="text" name="day_26" style="width: 20px" value="0"/>
                 </td>
                 <td>27</td>
                 <td>
-                    <input type="text" name="day_27" style="width: 20px"/>
+                    <input type="text" name="day_27" style="width: 20px" value="0"/>
                 </td>
                 <td>28</td>
                 <td>
-                    <input type="text" name="day_28" style="width: 20px"/>
+                    <input type="text" name="day_28" style="width: 20px" value="0"/>
                 </td>
 
               </tr>
@@ -460,15 +461,15 @@ class LabScalatraServlet
                 <td></td>
                 <td>29</td>
                 <td>
-                    <input type="text" name="day_29" style="width: 20px"/>
+                    <input type="text" name="day_29" style="width: 20px" value="0"/>
                 </td>
                 <td>30</td>
                 <td>
-                    <input type="text" name="day_30" style="width: 20px"/>
+                    <input type="text" name="day_30" style="width: 20px" value="0"/>
                 </td>
                 <td>31</td>
                 <td>
-                    <input type="text" name="day_31" style="width: 20px"/>
+                    <input type="text" name="day_31" style="width: 20px" value="0"/>
                 </td>
 
               </tr>
@@ -543,8 +544,11 @@ class LabScalatraServlet
     val projId = params("projId")
     val year = params("year")
     val month = params("month")
+    var hours: List[Int] = Nil
+    for(i <- 31 to 1) hours = params("day_"+i).toInt :: hours
+
     DBHandler.db withSession {
-      DBHandler.unassignProject(userId toInt, projId toInt)
+    //  DBHandler.reportTimesheet(userId toInt, projId toInt, year toInt, month toInt, hours)
     }
     redirect("/")
   }
@@ -555,7 +559,7 @@ class LabScalatraServlet
     val year = params("year")
     val month = params("month")
     DBHandler.db withSession {
-      DBHandler.removeTimesheet(userId toInt, projId toInt, year toInt, month toInt)
+     // DBHandler.removeTimesheet(userId toInt, projId toInt, year toInt, month toInt)
     }
     redirect("/")
   }
