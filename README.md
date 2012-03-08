@@ -6,8 +6,7 @@
 
         container:start
 
-3. Go to http://localhost:8080/.
+3. Go to http://localhost:8080/
 
-4. Learn more at http://www.scalatra.org/stable/book.
 
-5. Happy hacking!
+4. Happy hacking!
