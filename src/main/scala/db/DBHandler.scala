@@ -62,5 +62,16 @@ object DBHandler {
     proj delete
   }
 
+  def reportTimesheet(userId: Int, projId: Int, year: Int, month: Int, hours: scala.collection.immutable.List[Int]) {
+    for (      i <- 0 to 30)
+      Timesheet.userId ~ Timesheet.projId ~ Timesheet.year ~ Timesheet.month ~ Timesheet.day ~ Timesheet.hours insert (userId, projId, year, month, i+1, hours(i))
+  }
+
+  def showTimesheet(userId: Int, projId: Int) = for {
+    ts <- Timesheet if ts.userId === userId && ts.projId === projId
+    p <- Project if p.id === ts.projId
+    u <- User if u.id === userId
+  } yield (ts.year ~ ts.month ~ ts.day ~ ts.hours ~ p.projName ~ u.first ~ u.last)
+
 
 }

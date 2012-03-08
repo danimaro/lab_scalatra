@@ -1,4 +1,3 @@
-
 import java.lang.StringBuilder
 import main.scala.db.DBHandler
 import org.scalatra.ScalatraServlet
@@ -544,13 +543,44 @@ class LabScalatraServlet
     val projId = params("projId")
     val year = params("year")
     val month = params("month")
+    println(userId)
+    println(projId)
     var hours: List[Int] = Nil
-    for(i <- 31 to 1) hours = params("day_"+i).toInt :: hours
+    for (i <- 31 to 1 by -1) hours = params("day_" + i).toInt :: hours
 
     DBHandler.db withSession {
-    //  DBHandler.reportTimesheet(userId toInt, projId toInt, year toInt, month toInt, hours)
+      DBHandler.reportTimesheet(userId toInt, projId toInt, year toInt, month toInt, hours)
     }
     redirect("/timesheet")
+  }
+
+  get("/timesheet/report/show") {
+    val userId = params("userId")
+    val projId = params("projId")
+    contentType = "text/xml"
+
+    println(userId)
+    println(projId)
+
+    DBHandler.db withSession {
+      val result = new
+          StringBuilder("<reports>")
+      for (proj <- DBHandler.showTimesheet(userId toInt, projId toInt)) {
+        result append ("<date>")
+        result append (proj._1)
+        result append ("-")
+        result append (proj._2)
+        result append ("-")
+        result append (proj._3)
+        result append ("</date><hours>")
+        result append (proj._4)
+        result append ("</hours>")
+      }
+
+
+      result append "</reports>"
+      XML.fromString(result toString)
+    }
   }
 
   post("/timesheet/remove") {
@@ -559,7 +589,7 @@ class LabScalatraServlet
     val year = params("year")
     val month = params("month")
     DBHandler.db withSession {
-     // DBHandler.removeTimesheet(userId toInt, projId toInt, year toInt, month toInt)
+      // DBHandler.removeTimesheet(userId toInt, projId toInt, year toInt, month toInt)
     }
     redirect("/timesheet")
   }
