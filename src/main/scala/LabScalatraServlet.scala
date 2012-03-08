@@ -550,7 +550,7 @@ class LabScalatraServlet
     DBHandler.db withSession {
     //  DBHandler.reportTimesheet(userId toInt, projId toInt, year toInt, month toInt, hours)
     }
-    redirect("/")
+    redirect("/timesheet")
   }
 
   post("/timesheet/remove") {
@@ -561,7 +561,7 @@ class LabScalatraServlet
     DBHandler.db withSession {
      // DBHandler.removeTimesheet(userId toInt, projId toInt, year toInt, month toInt)
     }
-    redirect("/")
+    redirect("/timesheet")
   }
 
 }
