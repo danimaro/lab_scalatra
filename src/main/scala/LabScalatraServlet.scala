@@ -294,7 +294,7 @@ class LabScalatraServlet
         <h1>Scala, rocks!</h1>
         <h2>Timesheet</h2>
         <div style="width: 250px">
-          <form action="/user/create" method="post" theme="simple">
+          <form action="/timesheet/report" method="post" theme="simple">
             <table>
               <tr>
                 <td style="width: 70px">User id:</td>
@@ -498,7 +498,7 @@ class LabScalatraServlet
           <br/>
           <br/>
         <div style="width: 250px">
-          <form action="/user/create" method="post" theme="simple">
+          <form action="/timesheet/remove" method="post" theme="simple">
             <table>
               <tr>
                 <td style="width: 70px">User id:</td>
@@ -545,6 +545,17 @@ class LabScalatraServlet
     val month = params("month")
     DBHandler.db withSession {
       DBHandler.unassignProject(userId toInt, projId toInt)
+    }
+    redirect("/")
+  }
+
+  post("/timesheet/remove") {
+    val userId = params("userId")
+    val projId = params("projId")
+    val year = params("year")
+    val month = params("month")
+    DBHandler.db withSession {
+      DBHandler.removeTimesheet(userId toInt, projId toInt, year toInt, month toInt)
     }
     redirect("/")
   }
