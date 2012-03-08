@@ -287,5 +287,40 @@ class LabScalatraServlet
     redirect("/")
   }
 
+  get("/timesheet") {
+    contentType = "text/html"
+    <html>
+      <body>
+        <h1>Scala, rocks!</h1>
+        <h2>Timesheet</h2>
+        <div style="width: 250px">
+          <form action="/user/create" method="post" theme="simple">
+            <table>
+              <tr>
+                <td style="width: 70px">User id:</td>
+                <td>
+                    <input type="text" name="userId"/>
+                </td>
+              </tr>
+              <tr>
+                <td>Project Id:</td>
+                <td>
+                    <input type="text" name="projId"/>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Create" style="float: right"/>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </body>
+    </html>
+
+  }
+
 
 }
