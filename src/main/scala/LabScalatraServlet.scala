@@ -495,8 +495,8 @@ class LabScalatraServlet
             </table>
           </form>
         </div>
-        <br/>
-        <br/>
+          <br/>
+          <br/>
         <div style="width: 250px">
           <form action="/user/create" method="post" theme="simple">
             <table>
@@ -533,10 +533,20 @@ class LabScalatraServlet
             </table>
           </form>
         </div>
-        </body>
-      </html>
+      </body>
+    </html>
 
-      }
+  }
 
+  post("/timesheet/report") {
+    val userId = params("userId")
+    val projId = params("projId")
+    val year = params("year")
+    val month = params("month")
+    DBHandler.db withSession {
+      DBHandler.unassignProject(userId toInt, projId toInt)
+    }
+    redirect("/")
+  }
 
-      }
+}
